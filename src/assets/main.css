@@ -7,6 +7,18 @@
   font-weight: normal;
 }
 
+.button-count, .count {
+  display: inline;
+  padding: 5px;
+  margin: 5px;
+}
+
+.event {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+}
+
 a,
 .green {
   text-decoration: none;
