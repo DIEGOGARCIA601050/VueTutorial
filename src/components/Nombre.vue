@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <h2>Hola, mi nombre es {{ Nombre }}</h2>
+    <h2>Hola, mi nombre es {{ Nombre }} </h2>
 </template>
 
 <style>
