@@ -8,36 +8,6 @@
   </head>
   <body>
     <div id="app"></div>
-    <section class="divisa">
-      <h1>Convertir de dolares a pesos</h1>
-      <form action="f" id='formulario'>
-        <label for="dollars">
-          Introduzca la cantidad de dolares que desea cambiar: </label
-        ><br />
-        <input type="number" id="dollars" name="dollars" />
-        <input type="submit" contenteditable="enviar" />
-      </form>
-    </section>
-    <div id="resultados"></div>
-    <a href="./history.html">Personajes Historicos</a>
     <script type="module" src="/src/main.js"></script>
-    <script>
-      let Usuario;
-      const resultados = document.getElementById('resultados');
-document.querySelector('form')
-    .addEventListener('submit', e => {
-      e.preventDefault()
-        const data = Object.fromEntries(
-        new FormData(e.target)
-        )
-        Usuario = JSON?.stringify(data)
-        Usuario = JSON.parse(Usuario)
-        console.info(Usuario)
-        Usuario.edad = parseInt(Usuario.dollars)
-        console.info(Usuario)
-        console.log('funcionó');
-        resultados.innerHTML = Usuario.dollars
-      })
-    </script>
   </body>
 </html>
