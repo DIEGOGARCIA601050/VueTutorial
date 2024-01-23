@@ -10,7 +10,7 @@
 
 <template>
 <div>
-    <h1 :style="styleColor" class="nombresito">!HOLA {{nombresito.toUpperCase()}}¡</h1>
+    <h1 :style="styleColor" class="nombresito">Eventos Historicos: {{nombresito.toUpperCase()}}¡</h1>
 </div>
 </template>
 
@@ -19,5 +19,6 @@
         {
             font-weight: 500;
             font-size: 2.6rem;
+            text-align: center;
         }
 </style>

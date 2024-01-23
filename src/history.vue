@@ -45,6 +45,7 @@ export default {
 section {
     border: .1rem solid;
     text-align: center;
+    display: inline-block;
 }
 
 </style>
