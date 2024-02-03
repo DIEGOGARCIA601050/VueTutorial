@@ -12,7 +12,7 @@
 <style>
     
     img {
-    width: 50%;
+    width: 94%;
     height: 50%;
     }
 </style>

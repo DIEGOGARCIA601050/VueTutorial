@@ -46,6 +46,14 @@ section {
     border: .1rem solid;
     text-align: center;
     display: inline-block;
+    height: 744px;
+    overflow-y: auto;
+    flex: 1 0 20%; /* crecer, encoger, tamaño base */
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #000;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 </style>
