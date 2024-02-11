@@ -1,30 +1,51 @@
-<script setup>
-import { ref, computed } from 'vue'
-import App from './App.vue'
-import LaGuerraDeReforma from './components/LaGuerraDeReforma.vue';
-import NotFound from './components/NotFound.vue'
-import Tutorial from './components/Tutorial.vue';
-
-const routes = {
-  '/': App,
-  '/LaGuerraDeReforma': LaGuerraDeReforma,
-  '/Tutorial': Tutorial
+<script>
+  // Home.vue
+export default {
+  name: 'App',
+  computed: {
+    username() {
+      // We will see what `params` is shortly
+      return this.$route.params.username
+    },
+  },
+  methods: {
+    goToDashboard() {
+      if (isAuthenticated) {
+        this.$router.push('/dashboard')
+      } else {
+        this.$router.push('/login')
+      }
+    },
+  },
+  data() {
+    return {
+      message: ""
+    };
+  },
+  async mounted() {
+    fetch('https://verbose-orbit-g9w7q4x4x672wj4q-3000.app.github.dev/datos')
+      .then(res => res.text())
+      .then(res => {
+        this.message = res
+        return res
+      })
+      .catch(err => {
+        console.log(err);
+        return err
+      })
+      return this.message
+  }
 }
-
-const currentPath = ref(window.location.hash)
-
-window.addEventListener('hashchange', () => {
-  currentPath.value = window.location.hash
-})
-
-const currentView = computed(() => {
-  return routes[currentPath.value.slice(1) || '/'] || NotFound
-})
 </script>
-
 <template>
-  <a href="/">Home</a> |
-  <a href='/#/LaGuerraDeReforma'>La Guerra de Reforma</a> |
-  <a href="/#/Tutorial">Tutorial de Vue</a> |
-  <component :is="currentView" />
+    <div>{{ message }}</div>
+    <!-- use the router-link component for navigation. -->
+    <!-- specify the link by passing the `to` prop. -->
+    <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/Tutorial">Go to Tutorial</router-link>
+    <router-link to="/LaGuerraDeReforma">Go to La Guerra de Reforma</router-link>
+  <!-- route outlet -->
+  <!-- component matched by the route will render here -->
+  <router-view></router-view>
 </template>
