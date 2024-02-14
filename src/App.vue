@@ -23,7 +23,7 @@ export default {
     };
   },
   async mounted() {
-    fetch('https://verbose-orbit-g9w7q4x4x672wj4q-3000.app.github.dev/datos')
+    fetch('/api/message')
       .then(res => res.text())
       .then(res => {
         this.message = res
