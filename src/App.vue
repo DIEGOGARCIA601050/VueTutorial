@@ -33,19 +33,31 @@ export default {
         console.log(err);
         return err
       })
-      return this.message
+      return this.message?.text
   }
 }
 </script>
 <template>
-    <div>{{ message }}</div>
     <!-- use the router-link component for navigation. -->
     <!-- specify the link by passing the `to` prop. -->
     <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
-    <router-link to="/">Go to Home</router-link>
-    <router-link to="/Tutorial">Go to Tutorial</router-link>
-    <router-link to="/LaGuerraDeReforma">Go to La Guerra de Reforma</router-link>
+      <div class="navbar">
+        <div>{{ message }}</div>
+        <router-link to="/">Go to Home</router-link>
+        <router-link to="/Tutorial">Go to Tutorial</router-link>
+        <router-link to="/LaGuerraDeReforma">Go to La Guerra de Reforma</router-link>
+        <router-link to="/La-Revolución">Go to La Revolución</router-link>
+      </div>
+    
   <!-- route outlet -->
   <!-- component matched by the route will render here -->
   <router-view></router-view>
 </template>
+
+<style>
+  .navbar {
+    position: fixed;
+    background-color: whitesmoke;
+    display: block;
+  }
+</style>

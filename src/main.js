@@ -8,6 +8,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import LaGuerraDeReforma from './components/LaGuerraDeReforma.vue'
 import Tutorial from './components/Tutorial.vue'
+import LaRevolucion from './components/LaRevolucion.vue'
 
 
 
@@ -17,7 +18,8 @@ import Tutorial from './components/Tutorial.vue'
 const routes = [
   { path: '/', component: App },
   { path: '/LaGuerraDeReforma', component: LaGuerraDeReforma },
-  { path: '/Tutorial', component: Tutorial}
+  { path: '/Tutorial', component: Tutorial},
+  { path: '/La-Revolución', component: LaRevolucion }
 ]
 
 // 3. Create the router instance and pass the `routes` option
