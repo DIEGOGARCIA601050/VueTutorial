@@ -1,5 +1,4 @@
 <script>
-  // Home.vue
 export default {
   name: 'App',
   computed: {
@@ -26,9 +25,9 @@ export default {
     fetch('/api/message')
       .then(res => res.json())
       .then(res => {
-        this.message = res
+        this.message = res?.text
         console.log(res, '\n', typeof res, '\n', res?.text);
-        return res
+        return res?.text
       })
       .catch(err => {
         console.log(err);

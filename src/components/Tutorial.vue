@@ -69,13 +69,6 @@ function greet(event) {
   return active
 }
 </script>
-<script>
-     export default {
-      async mounted() {
-      const { text } = await (await fetch("/api/message")).json();
-      this.mensaje = text;
-    }}
-</script>
 <template>
   <div class="all">
     <div>{{ mensaje }}</div>
