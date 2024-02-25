@@ -85,6 +85,14 @@ function greet(event) {
     <ol>
       <li v-for="(item, index) in numbers" :key="index" :style="`color:${item}`">{{ `Soy ${item}` }}</li>
     </ol>
+    <ul>
+      <h3>Cheap Products</h3>
+      <template v-for="(item, property, index) in fruits" :key="index" :style="`color:${item}`">
+        <li v-if="item.price < 2">
+          {{ item.name }}: {{ item.price }}
+      </li>
+      </template>
+    </ul>
     <h3>Buy</h3>
     <table>
       <td class="tdTop"><h2>Fruit</h2></td>
@@ -100,7 +108,7 @@ function greet(event) {
       <p>{{ (() => 1-2)() }}</p>
     </div>
   <!-- `greet` is the name of the method defined above -->
-  <button class="button-count" @click="greet">Greet</button>
+  <button class="button-count greet" @click="greet">Greet</button>
     <button class="button-count" @click="count--"> - </button>
     <p class="count">{{ count }}</p>
     <button class="button-count" type="button" @click="count++"> + </button>
@@ -136,11 +144,6 @@ table {
 tbody {
   background-color: azure;
 }
-.all {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
 
 header {
   line-height: 1.5;
@@ -155,8 +158,8 @@ header {
   background-color: green;
 }
 
-.Initial {
-  color: yellowgreen;
+.greet {
+  display: block;
 }
 
 </style>

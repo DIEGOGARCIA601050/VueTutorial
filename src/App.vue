@@ -26,7 +26,6 @@ export default {
       .then(res => res.json())
       .then(res => {
         this.message = res?.text
-        console.log(res, '\n', typeof res, '\n', res?.text);
         return res?.text
       })
       .catch(err => {
@@ -58,6 +57,8 @@ export default {
   .navbar {
     position: fixed;
     background-color: whitesmoke;
-    display: block;
+    width: 100%;
+    text-align: center;
+    height: 10vh;
   }
 </style>
