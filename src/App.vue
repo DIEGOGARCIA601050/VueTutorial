@@ -24,7 +24,7 @@ export default {
   },
   async mounted() {
     fetch('/api/message')
-      .then(res => res.text())
+      .then(res => res.json())
       .then(res => {
         this.message = res
         console.log(res, '\n', typeof res, '\n', res?.json);
