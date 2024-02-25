@@ -27,7 +27,7 @@ export default {
       .then(res => res.json())
       .then(res => {
         this.message = res
-        console.log(res, '\n', typeof res, '\n', res?.json);
+        console.log(res, '\n', typeof res, '\n', res?.text);
         return res
       })
       .catch(err => {
