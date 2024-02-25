@@ -27,13 +27,14 @@ export default {
       .then(res => res.text())
       .then(res => {
         this.message = res
+        console.log(res, '\n', typeof res, '\n', res?.json);
         return res
       })
       .catch(err => {
         console.log(err);
         return err
       })
-      return this.message?.text
+      return this.message
   }
 }
 </script>
