@@ -43,7 +43,6 @@ export default {
       <div class="navbar">
         <div>{{ message }}</div>
         <router-link to="/">Go to Home</router-link>
-        <router-link to="/Tutorial">Go to Tutorial</router-link>
         <router-link to="/LaGuerraDeReforma">Go to La Guerra de Reforma</router-link>
         <router-link to="/La-Revolución">Go to La Revolución</router-link>
       </div>
