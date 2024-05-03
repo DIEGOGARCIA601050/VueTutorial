@@ -42,9 +42,9 @@ export default {
     <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
       <div class="navbar">
         <div>{{ message }}</div>
-        <router-link to="/">Go to Home</router-link>
-        <router-link to="/LaGuerraDeReforma">Go to La Guerra de Reforma</router-link>
-        <router-link to="/La-Revolución">Go to La Revolución</router-link>
+        <router-link to="/">Página principal</router-link>
+        <router-link to="/LaGuerraDeReforma">La Guerra de Reforma</router-link>
+        <router-link to="/La-Revolución">La Revolución</router-link>
       </div>
     
   <!-- route outlet -->
