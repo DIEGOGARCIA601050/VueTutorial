@@ -1,0 +1,8 @@
+nombre: Mejores-commits
+on: commit
+jobs:
+  Mejores-commits:
+    runs-on: ubuntu-latest
+    steps: 
+      - nombre: OpenCommit y mejora las compromisos con IA
+                usos: di-sukharev/opencommit.github-action-v1.0.2
